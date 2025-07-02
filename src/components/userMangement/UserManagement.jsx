@@ -191,16 +191,16 @@ const UserManagement = () => {
 
   return (
     <div className="w-full px-2 md:px-4 py-4">
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-4 gap-4">
+      <div className="flex w-full justify-between items-start md:items-center mb-4 gap-4">
         <Title level={4} className="m-0 text-lg md:text-xl">
           User Management
         </Title>
 
-        <div className="w-full md:w-auto flex flex-col sm:flex-row gap-2">
+        <div className="w-full md:w-auto flex  gap-2">
           <Input
             placeholder="Search by name or email"
             prefix={<SearchOutlined />}
-            className="w-full sm:w-48 md:w-64"
+            className="w-full sm:w-48 md:w-64 h-12"
             value={searchText}
             onChange={(e) => setSearchText(e.target.value)}
             allowClear
@@ -210,7 +210,7 @@ const UserManagement = () => {
             placeholder="Filter by status"
             value={statusFilter}
             onChange={(value) => setStatusFilter(value)}
-            className="w-full sm:w-36"
+            className="w-full sm:w-36 h-12"
             suffixIcon={<FilterOutlined />}
           >
             <Option value="all">All Users</Option>
